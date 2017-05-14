@@ -4,9 +4,11 @@ $(function() {
 $.ajax("https://www.codeschool.com/users/ofirhartuv.json", {
  dataType : 'jsonp',
  success: function(response){
-   $.each(response.courses.completed,function(index,course){
+   let courses = response.courses.completed;
+   console.log(courses);
+   $.each(courses,function(index,course){
       let newDiv = `<div class="course">
-        <h3 title="${course}"></h3>
+        <h3>${course.title}</h3>
         <img src="${course.badge}"></img>
         <a href="${course.url}" target="_blank">See Course</a>
        </div>`;
