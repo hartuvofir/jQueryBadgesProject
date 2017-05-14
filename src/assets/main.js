@@ -6,7 +6,8 @@ $.ajax("https://www.codeschool.com/users/ofirhartuv.json", {
  success: function(response){
    let courses = response.courses.completed;
    console.log(courses);
-   $.each(courses,function(index,course){
+   for (course of courses) {
+
       let newDiv = `<div class="course">
         <h3>${course.title}</h3>
         <img src="${course.badge}"></img>
