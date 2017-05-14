@@ -1,7 +1,7 @@
 $(function() {
 
   // your code will go here
-$.ajax("https://www.codeschool.com/users/ofirhartuv.json", {
+jQuery.ajax("https://www.codeschool.com/users/ofirhartuv.json", {
  dataType : 'jsonp',
  success: function(result){
    $.each(response.courses.completed,function(index,course){
@@ -12,7 +12,6 @@ $.ajax("https://www.codeschool.com/users/ofirhartuv.json", {
        </div>`;
 
         $('#badges').append($(newDiv));
-
    });
 
  }
