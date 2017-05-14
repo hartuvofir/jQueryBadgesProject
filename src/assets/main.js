@@ -4,10 +4,7 @@ $(function() {
 $.ajax("https://www.codeschool.com/users/ofirhartuv.json", {
  dataType : 'jsonp',
  success: function(response){
-   let courses = response.courses.completed;
-   console.log(courses);
-   for (course of courses) {
-
+   $.each(response.courses.completed,function(index,course){
       let newDiv = `<div class="course">
         <h3>${course.title}</h3>
         <img src="${course.badge}"></img>
